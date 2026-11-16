@@ -1,4 +1,7 @@
 // =====================================================================
+//  Monster.js — La Sombra (enemigo con IA básica).
+//  Responsable: Integrante 2.
+//
 //  Estados:
 //    dormant    → todavía no despertó (invisible, sin cuerpo físico).
 //    spawning   → acaba de aparecer; se queda quieta unos instantes.
@@ -139,7 +142,7 @@ export default class Monster extends Phaser.Physics.Arcade.Sprite {
       this.growlTimer = 7 + Math.random() * 6;
       if (dist < 450 && this.state === 'chasing') this.audio.playSfx(SFX.GROWL, { volume: 0.5 });
     }
-  
+  }
 
   /** Persigue con A* y velocidad con "rubber band": acelera si está muy lejos. */
   chase(dt, me, target, dist) {

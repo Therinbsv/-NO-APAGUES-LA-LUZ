@@ -1,4 +1,7 @@
 // =====================================================================
+//  Flashlight.js — Linterna: batería, orientación y detección de luz.
+//  Responsable: Integrante 2 (criatura, linterna y supervivencia).
+//
 //  Es la mecánica central del juego: la criatura se detiene cuando está
 //  dentro del cono de luz. Para saberlo se comprueba:
 //    1) distancia ≤ alcance,
