@@ -3,6 +3,7 @@
 //   · despierta a la criatura (por historia o por tiempo),
 //   · decide si está iluminada (linterna o luz del generador),
 //   · detecta el contacto → derrota,
+//   · controla el latido del corazón según la cercanía,
 //   · tras arrancar el generador, hace que la luz parpadee por ciclos
 //     (cuando se apaga, la criatura vuelve a moverse).
 // =====================================================================
@@ -49,7 +50,7 @@ export default class SurvivalManager extends Phaser.Events.EventEmitter {
     return this.roomLit && this.lightPhase !== 'off';
   }
 
-  // criatura
+  // ------------------------------------------------------------ criatura
   /** Despierta a la criatura en el punto de aparición más lejano al jugador. */
   awakenMonster() {
     if (this.monster.isActive) return;
@@ -76,7 +77,7 @@ export default class SurvivalManager extends Phaser.Events.EventEmitter {
     if (this.story.has('monsterAwake')) this.awakenMonster();
   }
 
-  //  luz de la habitación
+  // ------------------------------------------------------------ luz de la habitación
   activateRoomLight() {
     this.roomLit = true;
     this.lightPhase = 'on';
@@ -97,7 +98,7 @@ export default class SurvivalManager extends Phaser.Events.EventEmitter {
     if (prev !== this.lightPhase) this.emit('lightPhase', this.lightPhase);
   }
 
-  // contacto
+  // ------------------------------------------------------------ contacto
   /** Llamado por el overlap jugador–criatura de Arcade Physics. */
   handleTouch() {
     if (this.caught || !this.monster.isActive) return;
@@ -133,6 +134,7 @@ export default class SurvivalManager extends Phaser.Events.EventEmitter {
     } else this.emptyTimer = 0;
 
     if (!monster.isActive) {
+      this.audio.stopLoop(SFX.HEARTBEAT);
       return;
     }
 
@@ -144,6 +146,13 @@ export default class SurvivalManager extends Phaser.Events.EventEmitter {
     // Contacto por distancia (además del overlap de física, para ser justos y consistentes)
     const dist = Phaser.Math.Distance.Between(me.x, me.y, m.x, m.y);
     if (dist < MONSTER.CATCH_DISTANCE) this.handleTouch();
+
+    // Latido: más fuerte cuanto más cerca
+    const hb = Phaser.Math.Clamp((520 - dist) / 520, 0, 1);
+    if (hb > 0.05) {
+      this.audio.startLoop(SFX.HEARTBEAT, hb * 0.9);
+      this.audio.setLoopVolume(SFX.HEARTBEAT, hb * 0.9);
+    } else this.audio.stopLoop(SFX.HEARTBEAT);
   }
 
   /** Distancia a la criatura (para efectos visuales de la interfaz). */
