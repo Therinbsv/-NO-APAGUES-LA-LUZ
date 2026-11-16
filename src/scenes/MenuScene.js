@@ -66,7 +66,7 @@ export default class MenuScene extends Phaser.Scene {
     let y = hasSave ? 262 : 280;
     const step = 54;
     if (hasSave) {
-      const lv = Math.min(TOTAL_LEVELS, save?.story?.level ?? 1);
+      const lv = save?.story?.level ?? 1;
       buttons.push(new Button(this, GAME_WIDTH / 2, y, `CONTINUAR (Cap. ${lv})`, () => this.startGame('continue')));
       y += step;
     }
