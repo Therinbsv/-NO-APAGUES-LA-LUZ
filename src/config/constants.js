@@ -94,6 +94,7 @@ export const MONSTER = {
   RETREAT_TIME: 2.2,
   RETREAT_SPEED: 62,
   SPAWN_GRACE: 1.6, // segundos quieta tras aparecer
+  AUTO_AWAKEN_SECONDS: 55, // si no despierta por la historia, lo hace por tiempo
   DIFFICULTY: { easy: 0.8, normal: 1, hard: 1.2 }
 };
 
@@ -129,4 +130,4 @@ export const EVENTS = {
   PLAYFIELD_CLICK: 'nal:playfieldClick' // clic de ratón sobre el campo de juego (alterna la linterna)
 };
 
-export const TOTAL_LEVELS = 5;
+export const TOTAL_LEVELS = 7;

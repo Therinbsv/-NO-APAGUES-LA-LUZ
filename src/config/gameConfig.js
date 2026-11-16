@@ -4,7 +4,16 @@
 // =====================================================================
 import Phaser from 'phaser';
 import { GAME_WIDTH, GAME_HEIGHT } from './constants.js';
+import BootScene from '../scenes/BootScene.js';
+import PreloadScene from '../scenes/PreloadScene.js';
 import MenuScene from '../scenes/MenuScene.js';
+import InstructionsScene from '../scenes/InstructionsScene.js';
+import SettingsScene from '../scenes/SettingsScene.js';
+import GameScene from '../scenes/GameScene.js';
+import UIScene from '../scenes/UIScene.js';
+import PauseScene from '../scenes/PauseScene.js';
+import GameOverScene from '../scenes/GameOverScene.js';
+import EndingScene from '../scenes/EndingScene.js';
 
 export default {
   type: Phaser.AUTO,
@@ -20,5 +29,9 @@ export default {
     autoCenter: Phaser.Scale.CENTER_BOTH
   },
   input: { activePointers: 3 },
-  scene: [MenuScene]
+  physics: {
+    default: 'arcade',
+    arcade: { gravity: { x: 0, y: 0 }, debug: false }
+  },
+  scene: [BootScene, PreloadScene, MenuScene, InstructionsScene, SettingsScene, GameScene, UIScene, PauseScene, GameOverScene, EndingScene]
 };
