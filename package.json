@@ -2,14 +2,13 @@
   "name": "no-apagues-la-luz",
   "private": true,
   "version": "1.0.0",
-  "description": "NO APAGUES LA LUZ — videojuego de terror psicológico, exploración y supervivencia (Aplicaciones Web, EPN).",
+  "description": "NO APAGUES LA LUZ — videojuego de terror psicológico, exploración y supervivencia con Phaser 3 (Aplicaciones Web, EPN).",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview --host",
-    "check:layout": "node tools/check_layout.mjs",
-    "check:story": "node tools/check_story.mjs"
+    "check:layout": "node tools/check_layout.mjs"
   },
   "dependencies": {
     "phaser": "3.90.0"
