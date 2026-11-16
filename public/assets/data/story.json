@@ -1,0 +1,240 @@
+{
+  "meta": {
+    "title": "NO APAGUES LA LUZ",
+    "combination": [12, 8, 21],
+    "protagonist": "Mateo"
+  },
+
+  "intro": [
+    { "speaker": "Narrador", "text": "Una tormenta. Un apagón. Y en alguna parte de la casa, un teléfono vibra." },
+    { "speaker": "Mateo", "text": "Otra vez se fue la luz... Hace cinco años que las tormentas me despiertan así." },
+    { "speaker": "Mateo", "text": "Necesito la linterna. Creo que la dejé en la mesita de noche, junto a la cama." }
+  ],
+
+  "chapters": [
+    { "level": 1, "title": "El apagón", "objective": "Encuentra la linterna en la mesita de noche (esquina superior izquierda)." },
+    { "level": 2, "title": "Primeros mensajes", "objective": "Explora: busca pilas, fotografías y notas. El teléfono del escritorio vibra." },
+    { "level": 3, "title": "Las fotografías", "objective": "Algo despertó en la oscuridad. Abre la caja con candado del escritorio (pista: una fecha)." },
+    { "level": 4, "title": "La llamada", "objective": "El teléfono del escritorio está sonando. Contéstalo.", "objectiveAfterCall": "Pon la cinta en la grabadora del armario." },
+    { "level": 5, "title": "El incendio", "objective": "Busca la llave donde Sofía se escondía jugando (el baúl de juguetes)." },
+    { "level": 6, "title": "La llave", "objective": "Arranca el generador (esquina inferior derecha). Mantén pulsado E." },
+    { "level": 7, "title": "El desenlace", "objective": "La luz parpadea. Escapa por la puerta (arriba a la derecha) o enfrenta a la sombra.", "objectiveSecret": "Ya lo sabes todo. Ilumina a la sombra y acércate... o escapa por la puerta." }
+  ],
+
+  "phone": {
+    "messages": [
+      { "minLevel": 1, "text": "Mateo, ¿estás despierto? Se fue la luz." },
+      { "minLevel": 1, "text": "Tengo miedo. Por favor, no apagues la luz." },
+      { "minLevel": 2, "text": "Bien, ya tienes la linterna. Cuídala: la batería se acaba." },
+      { "minLevel": 2, "text": "Hay pilas repartidas por la habitación. Se recogen al pasar por encima." },
+      { "minLevel": 3, "text": "Ya despertó. Si la iluminas, se detiene. Si la dejas en la oscuridad, viene por ti." },
+      { "minLevel": 3, "text": "En el escritorio hay una caja con candado. Guardé algo ahí. Tú sabes la fecha." },
+      { "minLevel": 5, "text": "Ahora lo sabes todo. La llave está donde yo me escondía." },
+      { "minLevel": 6, "text": "El generador está al fondo. Mantén pulsado hasta que arranque. No te sueltes." },
+      { "minLevel": 7, "text": "La puerta ya abre. Corre, Mateo." }
+    ],
+    "secretMessage": "...Pero ¿de verdad quieres irte solo? Mírala a los ojos. Con la luz encendida.",
+    "empty": "No hay mensajes nuevos. El último dice: «No apagues la luz.»",
+    "call": [
+      { "speaker": "Sofía", "text": "...Mateo." },
+      { "speaker": "Sofía", "text": "¿Me oyes? La línea es mala. La oscuridad se mete en todo." },
+      { "speaker": "Sofía", "text": "En el armario hay una grabadora. Pon la cinta, por favor. Es hora de que lo recuerdes." }
+    ]
+  },
+
+  "items": {
+    "flashlight": {
+      "name": "Linterna",
+      "lines": [
+        { "speaker": "Mateo", "text": "Mi vieja linterna. Funciona... pero la batería no durará para siempre." },
+        { "speaker": "Narrador", "text": "F o clic: encender/apagar. Apunta con el ratón. Mantén ESPACIO para fijar el haz mientras retrocedes." }
+      ]
+    },
+    "photo_1": {
+      "name": "Foto: La familia",
+      "lines": [
+        { "speaker": "Foto", "text": "La familia en el jardín. Sofía sostiene un peluche de conejo. Detrás, la casa todavía intacta." }
+      ]
+    },
+    "photo_2": {
+      "name": "Foto: Cumpleaños de Sofía",
+      "lines": [
+        { "speaker": "Foto", "text": "Sofía sopla las velas de sus ocho años. Al fondo, una lámpara de noche con forma de luna. Siempre dormía con ella encendida." }
+      ]
+    },
+    "photo_3": {
+      "name": "Foto: La lámpara",
+      "lines": [
+        { "speaker": "Foto", "text": "La lámpara de luna, rota en el suelo. Al reverso, con tu letra: «Yo la apagué.»" },
+        { "speaker": "Mateo", "text": "No quería... solo quería que dejara de tener miedo." }
+      ]
+    },
+    "photo_4": {
+      "name": "Foto: 12-08-21",
+      "lines": [
+        { "speaker": "Foto", "text": "La última foto de Sofía. En el borde, escrita a mano, una fecha: 12-08-21." },
+        { "speaker": "Mateo", "text": "El día que se quemó la casa." }
+      ]
+    },
+    "note_1": {
+      "name": "Nota sobre la cama",
+      "lines": [
+        { "speaker": "Nota", "text": "«Mateo: si lees esto, es que la luz se fue otra vez. No le tengas miedo a la oscuridad. Témele a quedarte solo en ella. — S.»" }
+      ]
+    },
+    "note_2": {
+      "name": "Recorte de periódico",
+      "lines": [
+        { "speaker": "Recorte", "text": "«INCENDIO EN LA CALLE DE LOS CEDROS. Una vela encendida durante el apagón del 12 de agosto provocó el fuego. Una niña de ocho años no logró salir.»" },
+        { "speaker": "Mateo", "text": "..." }
+      ]
+    },
+    "note_3": {
+      "name": "Dibujo de Sofía",
+      "lines": [
+        { "speaker": "Dibujo", "text": "Un dibujo con crayones: un niño con linterna, una niña con vestido amarillo y, entre los dos, una sombra enorme... sonriendo." },
+        { "speaker": "Dibujo", "text": "Abajo, en letras torcidas: «La sombra me cuida.»" }
+      ]
+    },
+    "note_4": {
+      "name": "Papel bajo la alfombra",
+      "lines": [
+        { "speaker": "Nota", "text": "«Si llegaste hasta aquí, mira bien a la sombra. No quiere hacerte daño: es todo lo que quedó de mi miedo... y de tu cariño.»" },
+        { "speaker": "Nota", "text": "«Enfréntala con la luz y sabrás que nunca estuviste solo. — Sofía»" },
+        { "speaker": "Mateo", "text": "¿La sombra...? ¿Y si no es lo que pensaba?" }
+      ]
+    },
+    "tape": {
+      "name": "Cinta de casete",
+      "lines": [
+        { "speaker": "Narrador", "text": "Dentro de la caja hay una cinta de casete. En la etiqueta: «Para Mateo — S.»" }
+      ]
+    },
+    "key": {
+      "name": "Llave del generador",
+      "lines": [
+        { "speaker": "Narrador", "text": "Entre los peluches, una llave pequeña con una etiqueta: «GENERADOR».", "key": true }
+      ]
+    }
+  },
+
+  "interactables": [
+    { "id": "flashlight", "type": "flashlight", "x": 292, "y": 160, "texture": "item_flashlight", "label": "Recoger linterna", "radius": 90, "onTop": true },
+    { "id": "calendar", "type": "calendar", "x": 520, "y": 150, "texture": null, "label": "Mirar calendario", "radius": 80 },
+    { "id": "phone", "type": "phone", "x": 610, "y": 168, "texture": "item_phone", "label": "Usar teléfono", "radius": 95, "onTop": true },
+    { "id": "photo_4", "type": "photo", "x": 668, "y": 178, "texture": "item_photo", "label": "Examinar fotografía", "radius": 95, "onTop": true, "points": 10 },
+    { "id": "box", "type": "box", "x": 740, "y": 166, "texture": "item_box", "label": "Examinar caja", "radius": 95, "onTop": true },
+    { "id": "wardrobe", "type": "recorder", "x": 940, "y": 252, "texture": null, "label": "Abrir armario", "radius": 80 },
+    { "id": "door", "type": "door", "x": 1104, "y": 172, "texture": null, "label": "Examinar puerta", "radius": 80 },
+    { "id": "photo_2", "type": "photo", "x": 1098, "y": 420, "texture": "item_photo", "label": "Examinar fotografía", "radius": 80, "points": 10 },
+    { "id": "photo_1", "type": "photo", "x": 176, "y": 740, "texture": "item_photo", "label": "Examinar fotografía", "radius": 90, "onTop": true, "points": 10 },
+    { "id": "photo_3", "type": "photo", "x": 190, "y": 372, "texture": "item_photo", "label": "Examinar fotografía", "radius": 80, "points": 10 },
+    { "id": "note_1", "type": "note", "x": 176, "y": 300, "texture": "item_note", "label": "Leer nota", "radius": 80, "onTop": true, "points": 10 },
+    { "id": "note_2", "type": "note", "x": 528, "y": 722, "texture": "item_clipping", "label": "Leer recorte", "radius": 80, "points": 10 },
+    { "id": "note_3", "type": "note", "x": 420, "y": 914, "texture": "item_drawing", "label": "Mirar dibujo", "radius": 80, "onTop": true, "points": 10 },
+    { "id": "note_4", "type": "note", "x": 790, "y": 585, "texture": "item_note", "label": "Leer papel arrugado", "radius": 65, "alpha": 0.55, "points": 10 },
+    { "id": "chest", "type": "chest", "x": 996, "y": 836, "texture": null, "label": "Abrir baúl", "radius": 75 },
+    { "id": "generator", "type": "generator", "x": 1150, "y": 760, "texture": null, "label": "Examinar generador", "radius": 85 }
+  ],
+
+  "batteries": [
+    { "x": 190, "y": 470 },
+    { "x": 640, "y": 300 },
+    { "x": 930, "y": 330 },
+    { "x": 900, "y": 620 },
+    { "x": 320, "y": 820 },
+    { "x": 700, "y": 820 },
+    { "x": 1000, "y": 450 }
+  ],
+
+  "texts": {
+    "flashlightMissing": "Necesito encontrar la linterna primero. Está en la mesita de noche.",
+    "calendar": [
+      { "speaker": "Mateo", "text": "Un calendario detenido en agosto de 2021. El día 12 está rodeado con un círculo rojo. Y el reloj de la pared quedó parado a las 12:08." }
+    ],
+    "boxClosed": [
+      { "speaker": "Narrador", "text": "Una caja de música con un candado de tres diales. Parece pedir una fecha: DÍA - MES - AÑO." }
+    ],
+    "boxOpen": "La caja de música está vacía. Solo queda un eco de la nana.",
+    "boxHint": "Piensa... el día que todo cambió. Quizá esté en una fotografía o en el calendario.",
+    "recorderNoTape": [
+      { "speaker": "Mateo", "text": "Una vieja grabadora en el fondo del armario. Pero no tiene cinta." }
+    ],
+    "recorderDone": [
+      { "speaker": "Mateo", "text": "Ya escuché la cinta. Tengo que seguir." }
+    ],
+    "recording": [
+      { "speaker": "Grabación", "text": "Hola, Mateo. Si estás oyendo esto, es que otra vez se fue la luz." },
+      { "speaker": "Grabación", "text": "Esa noche apagaste mi lámpara porque querías que dejara de ser miedosa. Yo encendí una vela. Solo quería verte la cara para sentirme segura." },
+      { "speaker": "Grabación", "text": "No fue tu culpa. Pero desde entonces has apagado todas las luces, para no ver lo que pasó." },
+      { "speaker": "Grabación", "text": "La llave del generador está en el baúl de los juguetes, donde me escondía cuando jugábamos." },
+      { "speaker": "Grabación", "text": "Pase lo que pase... no apagues la luz." },
+      { "speaker": "Mateo", "text": "Sofía... ya lo recuerdo todo." }
+    ],
+    "chestLocked": [
+      { "speaker": "Mateo", "text": "El baúl de los juguetes. Solo hay peluches... y un conejo con una oreja quemada." }
+    ],
+    "chestKey": [
+      { "speaker": "Mateo", "text": "Debajo del conejo de peluche... una llave pequeña." }
+    ],
+    "chestEmpty": "Solo quedan los peluches.",
+    "generatorNoKey": [
+      { "speaker": "Mateo", "text": "Un generador de emergencia. Tiene un candado: necesito la llave." }
+    ],
+    "generatorReady": "Mantén pulsado E para arrancar el generador.",
+    "generatorOn": [
+      { "speaker": "Narrador", "text": "El generador ruge. Las luces de la habitación se encienden... pero tiemblan." },
+      { "speaker": "Mateo", "text": "La luz la detiene. Pero parpadea... cuando se apague, volverá a moverse." }
+    ],
+    "doorLocked": [
+      { "speaker": "Mateo", "text": "La puerta tiene un cerrojo eléctrico. Sin corriente no abre." }
+    ],
+    "doorOpen": [
+      { "speaker": "Mateo", "text": "La puerta cede. Afuera sigue lloviendo..." },
+      { "speaker": "Mateo", "text": "Puedo irme ahora. Dejar esta habitación atrás." }
+    ],
+    "doorSecretWarning": [
+      { "speaker": "Mateo", "text": "Podría irme... pero algo me dice que Sofía no quería eso." },
+      { "speaker": "Mateo", "text": "Todavía puedo volver y mirar a la sombra de frente." }
+    ],
+    "monsterObserve": [
+      { "speaker": "Mateo", "text": "No sé qué es... No puedo acercarme sin entender." },
+      { "speaker": "Mateo", "text": "Quizá las fotografías, la cinta y alguna nota escondida me lo digan." }
+    ]
+  },
+
+  "endings": {
+    "bad": {
+      "title": "FINAL MALO",
+      "subtitle": "LA OSCURIDAD",
+      "lines": [
+        "La luz se apaga.",
+        "La sombra te alcanza y, por fin, entiendes lo que Sofía quiso decirte.",
+        "Pero ya es tarde. En la oscuridad nadie escucha."
+      ],
+      "batteryOut": "Sin batería, la linterna muere entre tus dedos."
+    },
+    "normal": {
+      "title": "FINAL NORMAL",
+      "subtitle": "LA SALIDA",
+      "lines": [
+        "Abres la puerta. La lluvia te golpea la cara.",
+        "Detrás de ti, el generador sigue rugiendo: la luz de tu cuarto quedará encendida toda la noche.",
+        "Escapaste. Pero al mirar el cristal del vestíbulo ves dos sombras. Una es la tuya.",
+        "Quizá todavía quede algo por entender en esa habitación..."
+      ],
+      "hint": "Existe otro final para quien mire con más atención."
+    },
+    "secret": {
+      "title": "FINAL SECRETO",
+      "subtitle": "NUNCA ESTUVISTE SOLO",
+      "lines": [
+        "Levantas la linterna y miras a la sombra de frente.",
+        "Ya no tiene garras. Tiene la forma de una niña con un vestido amarillo.",
+        "—No apagaste la luz, Mateo. Nunca la apagaste. —susurra Sofía.",
+        "La habitación se llena de luz. Por primera vez en cinco años no tienes miedo de la oscuridad.",
+        "Nunca estuviste solo."
+      ]
+    }
+  }
+}
