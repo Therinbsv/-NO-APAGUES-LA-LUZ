@@ -19,7 +19,7 @@ export default class AudioManager {
     game.sound.mute = this.muted;
   }
 
-  //  Mute
+  // ----------------------------------------------------------- Mute
   isMuted() {
     return this.muted;
   }
@@ -36,7 +36,7 @@ export default class AudioManager {
     return this.muted;
   }
 
-  //  Volúmenes
+  // ----------------------------------------------------------- Volúmenes
   setMusicVolume(v) {
     this.settings.musicVolume = Math.min(1, Math.max(0, v));
     this.storage.saveSettings(this.settings);
@@ -54,7 +54,7 @@ export default class AudioManager {
     if (this.music) this.music.setVolume(this.settings.musicVolume * this.musicGain);
   }
 
-  //  Música
+  // ----------------------------------------------------------- Música
   /**
    * Reproduce una música en bucle. Si ya suena esa misma, no hace nada.
    * @param {string} key clave del audio cargado
@@ -79,14 +79,14 @@ export default class AudioManager {
     this.musicKey = null;
   }
 
-  //  Efectos
+  // ----------------------------------------------------------- Efectos
   /** Efecto de sonido puntual. */
   playSfx(key, { volume = 1, rate = 1 } = {}) {
     if (!this.game.cache.audio.exists(key)) return null;
     return this.game.sound.play(key, { volume: volume * this.settings.sfxVolume, rate });
   }
 
-  //  Bucles (latido, generador…)
+  // ----------------------------------------------------------- Bucles (latido, generador…)
   startLoop(key, volume = 0.5) {
     if (this.loops[key]) return this.loops[key];
     if (!this.game.cache.audio.exists(key)) return null;
@@ -117,7 +117,7 @@ export default class AudioManager {
     Object.keys(this.loops).forEach((k) => this.stopLoop(k));
   }
 
-  //  Pausa
+  // ----------------------------------------------------------- Pausa
   pauseAll() {
     this.game.sound.pauseAll();
   }

@@ -984,10 +984,6 @@ function drawCone(ctx, w, h) {
 }
 
 // ---------------------------------------------------------------- API pública
-export function generateMenuBackground(scene) {
-  canvasTexture(scene, TEX.ROOM_BG, WORLD.width, WORLD.height, drawRoom);
-}
-
 export function generateAllTextures(scene) {
   const T = TEX;
   canvasTexture(scene, T.PIXEL, 2, 2, (ctx) => {

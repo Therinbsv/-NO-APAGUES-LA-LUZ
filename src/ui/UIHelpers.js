@@ -27,3 +27,35 @@ export function makeText(scene, x, y, str, opts = {}) {
   t.setOrigin(opts.originX ?? 0, opts.originY ?? 0);
   return t;
 }
+
+/** Dibuja un panel redondeado semitransparente con borde dorado. */
+export function drawPanel(g, x, y, w, h, opts = {}) {
+  const { radius = 10, fill = 0x120d1a, alpha = 0.9, stroke = 0xd9b45a, lineWidth = 2, strokeAlpha = 0.9 } = opts;
+  g.fillStyle(fill, alpha);
+  g.fillRoundedRect(x, y, w, h, radius);
+  if (lineWidth > 0) {
+    g.lineStyle(lineWidth, stroke, strokeAlpha);
+    g.strokeRoundedRect(x, y, w, h, radius);
+  }
+  return g;
+}
+
+/** Color del nombre del hablante en los diálogos. */
+export function speakerColor(name) {
+  const n = (name || '').toLowerCase();
+  if (n.startsWith('sofía') || n.startsWith('grabación')) return COLORS.SOFIA;
+  if (n.startsWith('mateo')) return COLORS.MATEO;
+  if (n === 'narrador') return '#c9c1d8';
+  return '#e8dfc0'; // notas, fotos, recortes…
+}
+
+/** Sonido de clic de interfaz (si hay AudioManager registrado). */
+export function uiClick(scene) {
+  const audio = scene.registry.get('audio');
+  if (audio) audio.playSfx('sfx_click', { volume: 0.6 });
+}
+
+/** Rectángulo de pantalla completa oscuro (para fondos de modales). */
+export function dimmer(scene, alpha = 0.6) {
+  return scene.add.rectangle(0, 0, scene.scale.width, scene.scale.height, 0x000000, alpha).setOrigin(0, 0);
+}

@@ -1,4 +1,7 @@
 // =====================================================================
+//  SurvivalManager.js — Reglas de supervivencia.
+//  Responsable: Integrante 2.
+//
 //  Coordina Flashlight + Monster + luz de la habitación:
 //   · despierta a la criatura (por historia o por tiempo),
 //   · decide si está iluminada (linterna o luz del generador),
