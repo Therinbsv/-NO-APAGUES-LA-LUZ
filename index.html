@@ -2,12 +2,74 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#05030a" />
+    <meta
+      name="description"
+      content="NO APAGUES LA LUZ — terror psicológico, exploración y supervivencia hecho con Phaser.js"
+    />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icons/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icons/icon-192.png" />
     <title>NO APAGUES LA LUZ</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #05030a;
+        overflow: hidden;
+        touch-action: none;
+        -webkit-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+        font-family: Georgia, 'Times New Roman', serif;
+      }
+      #game-container {
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+      }
+      canvas {
+        display: block;
+        touch-action: none;
+        outline: none;
+      }
+      /* Aviso accesible para móviles en vertical: el juego funciona mejor en horizontal. */
+      #rotate-hint {
+        display: none;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        padding: 8px 12px;
+        text-align: center;
+        font-size: 14px;
+        color: #f4e9c8;
+        background: rgba(20, 12, 30, 0.92);
+        border-bottom: 1px solid #d9b45a;
+        z-index: 10;
+        pointer-events: none;
+      }
+      @media (orientation: portrait) and (max-width: 800px) {
+        #rotate-hint {
+          display: block;
+        }
+      }
+      noscript {
+        color: #f4e9c8;
+        display: block;
+        padding: 24px;
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="game-container"></div>
+    <div id="rotate-hint">Gira tu dispositivo en horizontal para una mejor experiencia.</div>
+    <noscript>Este videojuego necesita JavaScript habilitado.</noscript>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
